@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.card a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+.accordion {
+
+    width: 25%;
+    border: 1px solid black;
+}
+
+.marquee-news {
+
+    padding: 20px;
+}
