@@ -1,8 +1,11 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="WebUserControl1.ascx.vb" Inherits="Project1.WebUserControl1" %>
 <!-- MAIN CONTENT -->
     <!-- panels -->
-    <div class="d-flex justify-content-around">
-      <div class="accordion accordion-flush border-end" id="accordionFlushLeft">
+    <div class="row">
+      <div
+        class="col-md-2 accordion accordion-flush border-end"
+        id="accordionFlushLeft"
+      >
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button
@@ -86,41 +89,71 @@
           </div>
         </div>
       </div>
-      <div class="left-panel">
-        <div class="card" style="width: 18rem">
+      <div class="col-md-3 p-2">
+        <div class="card mb-3">
+          <div class="text-bg-danger card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Card subtitle
+              </h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card text-bg-warning">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Card subtitle
+              </h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- news panel marquee -->
+      <marquee
+        class="col-md-5 mt-3 news-panel"
+        behavior="scroll"
+        direction="up"
+        scrollamount="3"
+        scrolldelay="0"
+      >
+        <div class="card text-bg-info">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+        <hr />
+        <div class="card">
+          <div class="card text-bg-info">
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- moving panels  -->
-      <div class="marquee-news">
-        <marquee
-          behavior="scroll"
-          direction="up"
-          onmouseover="this.stop()"
-          onmouseout="this.start()"
-        >
-          <div class="card" style="width: 18rem">
+        <hr />
+        <div class="card">
+          <div class="card text-bg-info">
             <div class="card-body">
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -128,27 +161,13 @@
               </p>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </marquee>
-      </div>
+        </div>
+      </marquee>
 
-
-      <div class="accordion accordion-flush border-start" id="accordionFlushRight">
+      <div
+        class="col-md-2 accordion accordion-flush border-start"
+        id="accordionFlushRight"
+      >
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFour">
             <button
@@ -233,3 +252,4 @@
         </div>
       </div>
     </div>
+
